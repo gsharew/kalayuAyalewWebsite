@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethiopian Lawyer - Legal Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .hero-bg {
+        background-image: url("addis_ababa.png");
+        /*background-image: url("https://placehold.co/1920x1080/1a202c/4a5568?text=Modern+Legal+Office"); /* Placeholder for a professional background image */
+        background-size: cover;
+        background-position: center;
+      }
+      .section-title {
+        @apply text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center;
+      }
+      .practice-area-card {
+        @apply bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
+      }
+      .cta-button {
+        @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-0.5;
+      }
+      .nav-link {
+        @apply text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300;
+      }
+      .nav-link-active {
+        @apply bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium;
+      }
+      .footer-link {
+        @apply text-gray-400 hover:text-gray-300 transition-colors duration-300;
+      }
+      /* Custom animation for elements appearing on scroll (basic example) */
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+      .animate-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <nav class="bg-gray-800 fixed w-full z-50 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <a href="#" class="text-white text-xl font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 inline-block mr-2 text-blue-400"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
+                />
+              </svg>
+              Kalayu Ayalew Construction Law
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div
+              class="ml-10 flex items-baseline space-x-4"
+              style="color: white !important"
+            >
+              <a href="#home" class="nav-link-active">Home</a>
+              <a href="#about" class="nav-link">About Us</a>
+              <a href="#services" class="nav-link">Practice Areas</a>
+              <a href="#contact" class="nav-link">Contact</a>
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <button
+              type="button"
+              id="mobile-menu-button"
+              class="bg-gray-700 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div
+          class="px-2 pt-2 pb-3 space-y-1 sm:px-3"
+          style="color: white !important"
+        >
+          <a href="#home" class="nav-link-active block">Home</a>
+          <a href="#about" class="nav-link block">About Us</a>
+          <a href="#services" class="nav-link block">Practice Areas</a>
+          <a href="#contact" class="nav-link block">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <header id="home" class="hero-bg pt-16">
+      <div
+        class="bg-black bg-opacity-60 min-h-screen flex items-center justify-center"
+      >
+        <div class="text-center p-8 md:p-12 animate-on-scroll">
+          <h1
+            class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+          >
+            Expert Legal Solutions in Ethiopia
+          </h1>
+          <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Providing dedicated and strategic legal representation across a wide
+            range of practice areas. Your trusted partner in navigating the
+            Ethiopian legal landscape.
+          </p>
+          <!-- <a href="#contact" class="cta-button text-lg">
+            Schedule a Consultation
+          </a> -->
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center animate-on-scroll">
+          <h5 class="section-title">About Our Firm</h2>
+          <p class="text-gray-600 text-lg mb-12 max-w-3xl mx-auto">
+            Kalayu Ayalew Construction Law is a leading legal practice based in
+            Addis Ababa, Ethiopia, committed to delivering exceptional legal
+            services with integrity, professionalism, and a deep understanding
+            of local and international law. We pride ourselves on our
+            client-focused approach, ensuring personalized attention and
+            tailored solutions.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="animate-on-scroll">
+            <img
+              src="construction_law.jpg"
+              alt="Ethiopian Lawyer Portrait"
+              class="rounded-lg shadow-xl mx-auto"
+              onerror="this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Image+Not+Found';"
+            />
+          </div>
+          <div class="animate-on-scroll">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Our Mission & Values
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Our mission is to provide effective, ethical, and efficient legal
+              counsel. We are guided by principles of justice, diligence, and a
+              commitment to achieving the best possible outcomes for our
+              clients.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>Client-Centric Approach: Your needs are our priority.</li>
+              <li>Expertise & Experience: Deep knowledge of Ethiopian law.</li>
+              <li>Integrity & Transparency: Honest and clear communication.</li>
+              <li>Results-Driven: Focused on achieving your legal goals.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title animate-on-scroll">Our Practice Areas</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="practice-area-card animate-on-scroll">
+            <div class="flex items-center mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-blue-600 mr-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12M3 3v2.25M3 3l11.25 11.25M3 15h3M3 18h3m-3-6h3m0 0v3"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-700">
+                Corporate & Commercial Law
+              </h3>
+            </div>
+            <p class="text-gray-600">
+              Advising businesses on formation, contracts, mergers,
+              acquisitions, and regulatory compliance in Ethiopia.
+            </p>
+          </div>
+          <div
+            class="practice-area-card animate-on-scroll"
+            style="animation-delay: 0.1s"
+          >
+            <div class="flex items-center mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-blue-600 mr-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.73-.664 1.193-.816M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.63-6.837 4.655-5.653a2.548 2.548 0 1 0-3.586-3.586l-6.837 5.63"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-700">
+                Litigation & Dispute Resolution
+              </h3>
+            </div>
+            <p class="text-gray-600">
+              Representing clients in court proceedings, arbitration, and
+              mediation for civil and commercial disputes.
+            </p>
+          </div>
+          <div
+            class="practice-area-card animate-on-scroll"
+            style="animation-delay: 0.2s"
+          >
+            <div class="flex items-center mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-blue-600 mr-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.75A.75.75 0 0 1 2.25 4.5h.75m0 0H21m-9 12.75H9.098c-.935 0-1.753-.536-2.122-1.33L2.25 10.5M12 15.75V18.75m0 0A3.75 3.75 0 0 0 15.75 15H18m-6.75 3.75h.008v.008H12v-.008Zm0 0H4.507c-.935 0-1.753-.536-2.122-1.33L0 10.5M12 15.75V13.5m0 0V3.75m0 0h3.75M12 3.75h-3.75m0 0H21m-9 12.75H9.098c-.935 0-1.753-.536-2.122-1.33L2.25 10.5"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-700">
+                Real Estate Law
+              </h3>
+            </div>
+            <p class="text-gray-600">
+              Assistance with property transactions, leasing, development
+              projects, and land rights in Ethiopia.
+            </p>
+          </div>
+          <div
+            class="practice-area-card animate-on-scroll"
+            style="animation-delay: 0.3s"
+          >
+            <div class="flex items-center mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-blue-600 mr-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-700">
+                Employment Law
+              </h3>
+            </div>
+            <p class="text-gray-600">
+              Guidance on employment contracts, workplace disputes,
+              terminations, and compliance with Ethiopian labor laws.
+            </p>
+          </div>
+          <div
+            class="practice-area-card animate-on-scroll"
+            style="animation-delay: 0.4s"
+          >
+            <div class="flex items-center mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-blue-600 mr-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-700">
+                Investment Law
+              </h3>
+            </div>
+            <p class="text-gray-600">
+              Supporting foreign and domestic investors with legal frameworks,
+              licensing, and business setup in Ethiopia.
+            </p>
+          </div>
+          <div
+            class="practice-area-card animate-on-scroll"
+            style="animation-delay: 0.5s"
+          >
+            <div class="flex items-center mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-blue-600 mr-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-700">Family Law</h3>
+            </div>
+            <p class="text-gray-600">
+              Compassionate legal support for matters such as divorce, child
+              custody, adoption, and inheritance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-blue-700 text-white">
+      <div
+        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Discuss Your Legal Needs?
+        </h2>
+        <p class="text-lg md:text-xl text-blue-100 mb-8">
+          Contact us today for a confidential consultation. Let our expertise
+          guide you through your legal challenges and help you achieve your
+          objectives.
+        </p>
+        <a
+          href="#contact"
+          class="bg-white hover:bg-gray-100 text-blue-700 font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 text-lg"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title animate-on-scroll">Contact Us</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="animate-on-scroll">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Send Us a Message
+            </h3>
+            <form id="contactForm" class="space-y-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  for="phone"
+                  class="block text-sm font-medium text-gray-700"
+                  >Phone Number (Optional)</label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  for="subject"
+                  class="block text-sm font-medium text-gray-700"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  required
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700"
+                  >Message</label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  required
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                ></textarea>
+              </div>
+              <div>
+                <button type="submit" class="w-full cta-button">
+                  Send Message
+                </button>
+              </div>
+              <div id="form-status" class="mt-4 text-center"></div>
+            </form>
+          </div>
+          <div class="animate-on-scroll" style="animation-delay: 0.1s">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Our Office
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <strong class="font-medium text-gray-700">Address:</strong>
+              [Street Address], [Bole Sub-City or other area], Addis Ababa,
+              Ethiopia
+            </p>
+            <p class="text-gray-600 mb-2">
+              <strong class="font-medium text-gray-700">Phone:</strong> +251 XXX
+              XXX XXX
+            </p>
+            <p class="text-gray-600 mb-6">
+              <strong class="font-medium text-gray-700">Email:</strong>
+              info@ethiopianlegalcounsel.com (example)
+            </p>
+            <h4 class="text-xl font-semibold text-gray-800 mb-3">
+              Office Hours
+            </h4>
+            <p class="text-gray-600">Monday - Friday: 8:30 AM - 5:30 PM</p>
+            <p class="text-gray-600 mb-6">
+              Saturday: 9:00 AM - 1:00 PM (By Appointment)
+            </p>
+
+            <div
+              class="mt-6 h-64 bg-gray-300 rounded-lg shadow-md flex items-center justify-center text-gray-500"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.2194018685287!2d38.79494376284695!3d9.017414619605093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85003b268fa9%3A0x4676c1e1422c31d6!2sLem%20Hotel%2C%20megenagna!5e0!3m2!1sen!2set!4v1748938984044!5m2!1sen!2set"
+                width="100%"
+                height="250"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h5 class="text-lg font-semibold text-white mb-3">
+              Kalayu Ayalew Construction Law
+            </h5>
+            <p class="text-sm">
+              Your trusted legal partner in Ethiopia. Committed to excellence
+              and justice.
+            </p>
+            <div class="mt-4 flex space-x-4">
+              <a href="#" class="footer-link hover:text-blue-400">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="footer-link hover:text-blue-400">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="footer-link hover:text-blue-400">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h5 class="text-lg font-semibold text-white mb-3">Quick Links</h5>
+            <ul class="space-y-2">
+              <li><a href="#about" class="footer-link">About Us</a></li>
+              <li>
+                <a href="#services" class="footer-link">Practice Areas</a>
+              </li>
+              <li><a href="#contact" class="footer-link">Contact Us</a></li>
+              <li><a href="#" class="footer-link">Privacy Policy</a></li>
+              <li><a href="#" class="footer-link">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-lg font-semibold text-white mb-3">
+              Legal Disclaimer
+            </h5>
+            <p class="text-sm">
+              The information provided on this website is for general
+              informational purposes only and does not constitute legal advice.
+              Contacting us does not create an attorney-client relationship.
+            </p>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+          <p>
+            &copy; <span id="currentYear"></span> Ethiopian Legal Counsel. All
+            Rights Reserved.
+          </p>
+          <p>Designed with a modern touch.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenuButton.addEventListener("click", () => {
+        const expanded =
+          mobileMenuButton.getAttribute("aria-expanded") === "true" || false;
+        mobileMenuButton.setAttribute("aria-expanded", !expanded);
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuButton
+          .querySelectorAll("svg")
+          .forEach((svg) => svg.classList.toggle("hidden"));
+      });
+
+      // Smooth scrolling for anchor links & active nav link update
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+            // Close mobile menu if open
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenuButton.click();
+            }
+          }
+        });
+      });
+
+      // Update active nav link on scroll
+      const sections = document.querySelectorAll("header[id], section[id]");
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          // Adjust offset for fixed navbar
+          if (pageYOffset >= sectionTop - sectionHeight / 3 - 70) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("nav-link-active");
+          link.classList.add("nav-link");
+          if (link.getAttribute("href").substring(1) === current) {
+            link.classList.add("nav-link-active");
+            link.classList.remove("nav-link");
+          }
+        });
+        // Ensure home is active if at top or no specific section is active
+        if (
+          current === "" ||
+          current === "home" ||
+          pageYOffset < sections[1].offsetTop - 70
+        ) {
+          document
+            .querySelector('nav a[href="#home"]')
+            .classList.add("nav-link-active");
+          document
+            .querySelector('nav a[href="#home"]')
+            .classList.remove("nav-link");
+        }
+      });
+
+      // Set current year in footer
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // Basic Contact Form Handler (for demonstration)
+      const contactForm = document.getElementById("contactForm");
+      const formStatus = document.getElementById("form-status");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          formStatus.textContent = "Sending message...";
+          formStatus.className = "text-blue-600";
+
+          // Simulate form submission
+          setTimeout(() => {
+            // Replace with actual form submission logic (e.g., using Fetch API to a backend)
+            const formData = new FormData(contactForm);
+            const name = formData.get("name");
+            console.log("Form submitted:", Object.fromEntries(formData));
+
+            formStatus.textContent = `Thank you, ${name}! Your message has been sent. We will get back to you shortly.`;
+            formStatus.className = "text-green-600 font-semibold";
+            contactForm.reset();
+          }, 1500);
+        });
+      }
+
+      // Animate elements on scroll
+      const scrollElements = document.querySelectorAll(".animate-on-scroll");
+      const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+          elementTop <=
+          (window.innerHeight || document.documentElement.clientHeight) /
+            dividend
+        );
+      };
+
+      const displayScrollElement = (element) => {
+        element.classList.add("is-visible");
+      };
+
+      const hideScrollElement = (element) => {
+        element.classList.remove("is-visible");
+      };
+
+      const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+          if (elementInView(el, 1.05)) {
+            // Adjust threshold as needed
+            displayScrollElement(el);
+          }
+          // Optional: hide element when scrolled out of view
+          // else {
+          //     hideScrollElement(el);
+          // }
+        });
+      };
+
+      window.addEventListener("scroll", () => {
+        handleScrollAnimation();
+      });
+      // Trigger animation for elements already in view on load
+      handleScrollAnimation();
+    </script>
+  </body>
+</html>
